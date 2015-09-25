@@ -50,11 +50,15 @@ set ignorecase " searches are case insensitive...
 set smartcase " ... unless they contain at least one capital letter
 
 "NeoBundle Scripts-----------------------------
+" Note: Skip initialization for vim-tiny or vim-small.
+if 0 | endif
 if has('vim_starting')
-  set nocompatible               " Be iMproved
+  if &compatible
+    set nocompatible               " Be iMproved
+  endif
 
   " Required:
-  set runtimepath+=/Users/telnicky/.vim/bundle/neobundle.vim/
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
 ""
@@ -103,7 +107,7 @@ nmap <Leader>F :execute "!clear && bundle exec rspec --only-failures"<CR>
 
 
 " Required:
-call neobundle#begin(expand('/Users/telnicky/.vim/bundle'))
+call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
 " Required:
