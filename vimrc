@@ -96,8 +96,11 @@ map <Down> gj
 map <Up> gk
 
 " Run tests
-nmap <Leader>r :execute "!clear && rspec %\\:" . line(".")<CR>
-nmap <Leader>R :execute "!clear && rspec %"<CR>
+nmap <Leader>r :execute "!clear && bundle exec rspec %\\:" . line(".")<CR>
+nmap <Leader>R :execute "!clear && bundle exec rspec %"<CR>
+nmap <Leader>f :execute "!clear && bundle exec rspec --next-failure"<CR>
+nmap <Leader>F :execute "!clear && bundle exec rspec --only-failures"<CR>
+
 
 " Required:
 call neobundle#begin(expand('/Users/telnicky/.vim/bundle'))
@@ -108,22 +111,28 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Add or remove your Bundles here:
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-unimpaired'
+NeoBundle 'tpope/vim-eunuch'
+NeoBundle 'tpope/vim-rails'
 NeoBundle 'thoughtbot/pick.vim'
-NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'scrooloose/syntastic'
 NeoBundle 'godlygeek/csapprox'
 NeoBundle 'terryma/vim-multiple-cursors'
 NeoBundle 'ervandew/supertab'
-NeoBundle 'scrooloose/syntastic'
 NeoBundle 'jeetsukumaran/vim-buffergator'
 NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'michaeljsmith/vim-indent-object'
-NeoBundle 'tpope/vim-unimpaired'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'blueyed/vim-diminactive'
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'godlygeek/tabular'
+" color schemes
+NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'hewo/vim-colorscheme-deepsea'
 
 " Required:
 call neobundle#end()
@@ -141,8 +150,8 @@ NeoBundleCheck
 "
 
 " Ack
-map <leader>f :Ack 
-map <leader>F :AckFromSearch 
+map <leader>A :Ack 
+map <leader>a :AckFromSearch 
 
 " fugitive
 map <leader>gb :Gblame<CR>
@@ -155,8 +164,7 @@ map <leader>gp :Gdiff<CR>
 " Nerd Tree
 map <leader>n :NERDTreeToggle<CR> :NERDTreeMirror<CR>
 
-colorscheme gruvbox
-se background=dark
+colorscheme deepsea
 
 " pick
 map <leader>p :call PickFile()<CR>

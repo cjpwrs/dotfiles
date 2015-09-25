@@ -6,4 +6,4 @@ if [ -x /usr/libexec/path_helper ]; then
   eval `/usr/libexec/path_helper -s`
 fi
 
-ulimit -n 512
+ulimit -n 1024
