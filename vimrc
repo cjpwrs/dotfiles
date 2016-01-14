@@ -129,14 +129,17 @@ NeoBundle 'jeetsukumaran/vim-buffergator'
 NeoBundle 'bronson/vim-trailing-whitespace'
 NeoBundle 'michaeljsmith/vim-indent-object'
 NeoBundle 'mileszs/ack.vim'
-NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'mustache/vim-mustache-handlebars'
 NeoBundle 'blueyed/vim-diminactive'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'godlygeek/tabular'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'mxw/vim-jsx'
+NeoBundle 'kien/rainbow_parentheses.vim'
+NeoBundle 'elixir-lang/vim-elixir'
+
 " color schemes
 NeoBundle 'flazz/vim-colorschemes'
-NeoBundle 'hewo/vim-colorscheme-deepsea'
 
 " Required:
 call neobundle#end()
@@ -168,8 +171,16 @@ map <leader>gp :Gdiff<CR>
 " Nerd Tree
 map <leader>n :NERDTreeToggle<CR> :NERDTreeMirror<CR>
 
-colorscheme deepsea
+colorscheme railscasts
 
 " pick
 map <leader>p :call PickFile()<CR>
 
+" jsx syntax
+let g:jsx_ext_required = 0
+
+" rainbow parens
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces

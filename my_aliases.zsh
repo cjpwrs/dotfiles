@@ -53,3 +53,6 @@ alias supc="supervisorctl"
 alias path='echo $PATH'
 alias reload='source ~/.zshrc'
 alias wifi='networksetup -setairportpower airport off; networksetup -setairportpower airport on'
+
+# docker
+alias doco='docker-compose'
