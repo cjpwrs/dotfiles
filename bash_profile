@@ -7,4 +7,4 @@ source /usr/local/share/chruby/auto.sh
 chruby ruby-2.3.0
 
 source /Users/elnicky/code/dotfiles/git-prompt.sh
-  export PS1='\h:\W $(__git_ps1 "%s ")λ '
+  export PS1='\W $(__git_ps1 "%s ")λ '
