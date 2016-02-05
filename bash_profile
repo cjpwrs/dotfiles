@@ -5,3 +5,6 @@ source /Users/elnicky/code/dotfiles/bash_config.sh
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 chruby ruby-2.3.0
+
+source /Users/elnicky/code/dotfiles/git-prompt.sh
+  export PS1='\h:\W $(__git_ps1 "%s") λ '

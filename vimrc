@@ -138,6 +138,7 @@ NeoBundle 'mxw/vim-jsx'
 NeoBundle 'kien/rainbow_parentheses.vim'
 NeoBundle 'elixir-lang/vim-elixir'
 NeoBundle 'editorconfig/editorconfig-vim'
+NeoBundle 'rking/ag.vim'
 
 " color schemes
 NeoBundle 'flazz/vim-colorschemes'
