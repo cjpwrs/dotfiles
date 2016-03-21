@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require_relative 'project_completion'
+puts ProjectCompletion.new(ENV['PROJECT_PATH'], ENV['COMP_LINE']).matches
+exit 0

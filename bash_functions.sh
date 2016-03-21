@@ -1,4 +1,2 @@
-function c { cd ~/code/$1; }
-
-function p { cd ~/podium/$1; }
-
+function c { cd $PROJECT_PATH/$1; }
+function p { cd $PODIUM_PATH/$1; }
