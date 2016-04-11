@@ -142,6 +142,7 @@ NeoBundle 'rking/ag.vim'
 
 " color schemes
 NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'morhetz/gruvbox'
 
 " Required:
 call neobundle#end()
@@ -173,6 +174,8 @@ map <leader>gp :Gdiff<CR>
 " Nerd Tree
 map <leader>n :NERDTreeToggle<CR> :NERDTreeMirror<CR>
 
+let g:gruvbox_italic=1
+highlight Comment cterm=italic
 colorscheme gruvbox
 set background=dark
 

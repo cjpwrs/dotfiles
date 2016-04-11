@@ -13,4 +13,7 @@ export PROMPT_COMMAND='history -a'
 bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
 
+# TOOD: remove the `_osx` once updated to iterm2.9
+source  /Users/elnicky/.vim/bundle/gruvbox/gruvbox_256palette_osx.sh
+
 source ~/.bashrc
